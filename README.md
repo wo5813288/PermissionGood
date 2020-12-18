@@ -44,4 +44,5 @@ AOP动态权限申请
         Log.e("wqs", "取消授予权限: ==="+requestCode );
     }
   ```
+  其中 value为权限数据，requestCode 为当前申请权限的标识
   
