@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -137,5 +138,15 @@ public class PermissionRequestFragment extends Fragment implements Runnable {
     public void run() {
         // 请求其他危险权限
         requestPermission(getArguments().getInt(REQUEST_CODE),getArguments().getStringArray(REQUEST_PERMISSION));
+    }
+
+    @Override
+    public void onDestroyView() {
+        if(BuildConfig.DEBUG){
+            Log.d("permissionGood","fragment销毁时解除引用的activity对象");
+        }
+        fragmentManager = null;
+        mIPermission = null;
+        super.onDestroyView();
     }
 }

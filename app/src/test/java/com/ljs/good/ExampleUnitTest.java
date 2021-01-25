@@ -1,4 +1,4 @@
-package com.ljs.permission.good;
+package com.ljs.good;
 
 import org.junit.Test;
 

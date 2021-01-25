@@ -1,4 +1,4 @@
-package com.ljs.permission.good;
+package com.ljs.good;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.ljs.permission.good", appContext.getPackageName());
+        assertEquals("com.ljs.good", appContext.getPackageName());
     }
 }
